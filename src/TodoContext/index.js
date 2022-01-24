@@ -9,6 +9,7 @@ function TodoProvider(props) {
     []
   );
   const [searchValue, setSearchValue] = React.useState("");
+  const [openModal, setOpenModal] = React.useState(false)
 
   let searchTodos = [];
   if (!searchValue >= 1) {
@@ -47,6 +48,8 @@ function TodoProvider(props) {
         searchTodos,
         completeTodo,
         deleteTodo,
+        openModal,
+        setOpenModal
       }}
     >
       {props.children}
